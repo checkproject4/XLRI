@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1061270114286",
+    "firebase_url": "https://xlri-53b3e.firebaseio.com",
+    "project_id": "xlri-53b3e",
+    "storage_bucket": "xlri-53b3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061270114286:android:07dcc3fa93218e994588ff",
+        "android_client_info": {
+          "package_name": "com.example.xlriproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061270114286-bqnubtql1hj14vpqgkgvvka4nh1f9s6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOGquPDX31Wr3nUxk_U_FDqComm5bnDO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061270114286-bqnubtql1hj14vpqgkgvvka4nh1f9s6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

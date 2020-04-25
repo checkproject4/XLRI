@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/teacher_picture"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/profile_image"
+                    android:layout_marginTop="50dp" android:layout_marginLeft="100dp"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/teacher_name" android:layout_marginTop="20dp"
+                    android:hint="Enter Your Name" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/teacher_age" android:layout_marginTop="20dp"
+                    android:hint="Age   " android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/teacher_sex" android:layout_marginTop="20dp" android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" android:hint="Male or Female"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/teacher_email" android:layout_marginTop="20dp" android:hint="Enter Email"
+                    android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/teacher_phone" android:layout_marginTop="20dp"
+                    android:hint="Enter Contact Number" android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/teacher_address" android:layout_marginTop="20dp" android:hint="Enter Your City"
+                    android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/teacher_company_name"
+                    android:layout_marginTop="20dp" android:hint="Enter Company Name (if any)"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" android:textSize="18sp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/teach" android:layout_marginTop="15dp" android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" android:hint="What do you teach?" android:textSize="18sp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/exp" android:layout_marginTop="15dp" android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" android:hint="Experience " android:textSize="18sp"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/fees" android:layout_marginTop="15dp" android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" android:hint="fees  " android:textSize="18sp"/>
+            <Button
+                    android:text="Create Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/teacher_profile_btn"
+                    android:layout_marginTop="10dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
