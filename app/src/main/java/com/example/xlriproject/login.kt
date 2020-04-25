@@ -9,13 +9,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.xlriproject.Teachers.TeacherDetails
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import org.w3c.dom.Text
-import java.util.*
 
 class login : AppCompatActivity() {
     var email: EditText? = null
@@ -97,7 +96,7 @@ class login : AppCompatActivity() {
 
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()) {
-                 startActivity(Intent(applicationContext,TeacherDetails::class.java))
+                 startActivity(Intent(applicationContext, TeacherDetails::class.java))
                 }
                 else {
                     userreference!!.child("Student").child(uid)!!.addValueEventListener(object : ValueEventListener {
