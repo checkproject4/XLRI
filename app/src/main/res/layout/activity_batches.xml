@@ -9,7 +9,12 @@
 
     <androidx.cardview.widget.CardView
             android:layout_width="80dp"
-            android:layout_height="80dp" android:background="@drawable/add_batch"
+            android:layout_height="80dp"
             android:layout_alignParentRight="true" android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp" app:cardElevation="5dp" android:id="@+id/add_batch_btn"/>
+            android:layout_marginBottom="20dp" app:cardElevation="5dp" android:id="@+id/add_batch_btn"
+            android:layout_marginRight="20dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/add_batch" android:id="@+id/imageView"/>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
