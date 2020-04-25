@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.xlriproject.Parents.ParentDetails
 import com.example.xlriproject.Teachers.TeacherDetails
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -97,6 +98,7 @@ class login : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()) {
                  startActivity(Intent(applicationContext, TeacherDetails::class.java))
+                    finish()
                 }
                 else {
                     userreference!!.child("Student").child(uid)!!.addValueEventListener(object : ValueEventListener {
@@ -116,8 +118,8 @@ class login : AppCompatActivity() {
 
                                     override fun onDataChange(p0: DataSnapshot) {
                                         if (p0.exists()) {
-                                            Toast.makeText(applicationContext, "Welcome Parent", Toast.LENGTH_SHORT)
-                                                .show()
+                                            startActivity(Intent(applicationContext, ParentDetails::class.java))
+                                            finish()
                                         }
                                     }
                                 })

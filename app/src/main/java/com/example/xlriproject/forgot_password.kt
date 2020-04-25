@@ -25,7 +25,7 @@ var email:EditText?=null
         send_reset_btn!!.setOnClickListener { 
             sendResetLink(email!!)
         }
-    }hhjhj
+    }
 
     private fun sendResetLink(email: EditText) {
         var emailid=email.text.toString().trim()

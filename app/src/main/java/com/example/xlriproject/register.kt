@@ -4,10 +4,7 @@ import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
@@ -32,6 +29,8 @@ var email:EditText?=null
         register_btn=findViewById(R.id.register_user_btn)
         firebaseauth=FirebaseAuth.getInstance()
         var category=intent.getStringExtra("category")
+        var register_heading=findViewById<TextView>(R.id.register_heading)
+        register_heading.text=category+" Register"
         register_btn!!.setOnClickListener {
             registerTeacher(email!!,password!!,repassword!!,category)
         }

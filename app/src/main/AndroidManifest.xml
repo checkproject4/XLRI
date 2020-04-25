@@ -9,6 +9,20 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".Teachers.AddBatchActivity">
+        </activity>
+        <activity android:name=".Teachers.Batches">
+        </activity>
+        <activity android:name=".Teachers.TeacherActivity">
+        </activity>
+        <activity android:name=".Parents.ParentActivity">
+        </activity>
+        <activity android:name=".Students.StudentActivity">
+        </activity>
+        <activity android:name=".Students.StudentDetail">
+        </activity>
+        <activity android:name=".Parents.ParentDetails">
+        </activity>
         <activity
                 android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
                 android:theme="@style/Base.Theme.AppCompat"/>
