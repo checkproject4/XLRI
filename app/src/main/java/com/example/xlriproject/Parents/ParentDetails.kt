@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import com.example.xlriproject.R
 import com.example.xlriproject.Teachers.TeacherActivity
@@ -20,7 +21,7 @@ class ParentDetails : AppCompatActivity() {
     lateinit var firebaseAuth : FirebaseAuth
     lateinit var name:EditText
     lateinit var age :EditText
-    lateinit var sex:EditText
+    lateinit var sex:Spinner
     lateinit var email:EditText
     lateinit var phone:EditText
     lateinit var address:EditText
@@ -31,7 +32,7 @@ class ParentDetails : AppCompatActivity() {
         setContentView(R.layout.activity_parent_details)
         name = findViewById<EditText>(R.id.parent_name)
         age = findViewById<EditText>(R.id.parent_age)
-        sex = findViewById<EditText>(R.id.parent_sex)
+        sex = findViewById<Spinner>(R.id.parent_sex)
         email = findViewById<EditText>(R.id.parent_email)
         phone = findViewById<EditText>(R.id.parent_phone)
         address = findViewById<EditText>(R.id.parent_address)
@@ -48,7 +49,6 @@ class ParentDetails : AppCompatActivity() {
                 if(p0.hasChild("ParentAddress"))
                 {
                     var intent: Intent = Intent(this@ParentDetails , ParentActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     startActivity(intent)
                     finish()
                 }
@@ -63,7 +63,7 @@ class ParentDetails : AppCompatActivity() {
     private fun CreateProfile(){
         var Name = name.text.toString().trim()
         var Age = age.text.toString().trim()
-        var Sex = sex.text.toString().trim()
+        var Sex = sex.selectedItem.toString().trim()
         var Email = email.text.toString().trim()
         var Phone = phone.text.toString().trim()
         var Address = address.text.toString().trim()
@@ -105,10 +105,7 @@ class ParentDetails : AppCompatActivity() {
                 OnCompleteListener<Void> {
                 override fun onComplete(task: Task<Void>) {
                     if (task.isSuccessful()) {
-                         var intent: Intent = Intent(this@ParentDetails, ParentActivity::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                        startActivity(intent)
-                        finish()
+
                  Toast.makeText(applicationContext, "Profile Uploaded Successfully", Toast.LENGTH_SHORT).show()
                     } else {
                         var error = task.exception?.message

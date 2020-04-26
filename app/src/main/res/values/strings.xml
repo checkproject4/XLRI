@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">XLRI Project</string>
+    <string-array name="Spinner_items">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Prefer Not To Say</item>
+    </string-array>
+    <string-array name="document_type">
+        <item>Class 10th</item>
+        <item>Class 12th</item>
+        <item>UG</item>
+        <item>PG</item>
+        <item>Others</item>
+    </string-array>
 </resources>

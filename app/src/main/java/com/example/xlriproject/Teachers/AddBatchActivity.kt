@@ -85,12 +85,12 @@ var ref=RootRef.push()
                 override fun onDataChange(p0: DataSnapshot) {
               var batch_id=ref.key.toString()
                     var ProfileMap  = HashMap<String , String>()
-                    ProfileMap.put("StudentName", Name)
-                    ProfileMap.put("StudentAge", Location)
+                    ProfileMap.put("name", Name)
+                    ProfileMap.put("location", Location)
                     ProfileMap.put("StudentSex", Teacher)
-                    ProfileMap.put("StudentEmail", Time)
-                    ProfileMap.put("StudentPhone", Days)
-                    ProfileMap.put("StudentAddress", Slots)
+                    ProfileMap.put("time", Time)
+                    ProfileMap.put("days", Days)
+                    ProfileMap.put("slots", Slots)
                     ProfileMap.put("Batch Id",batch_id)
 
                     RootRef.child(batch_id)?.setValue(ProfileMap).addOnCompleteListener(object :
