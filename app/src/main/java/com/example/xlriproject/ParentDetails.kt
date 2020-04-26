@@ -1,4 +1,4 @@
-package com.example.xlriproject.Parents
+package com.example.xlriproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,13 +8,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
-import com.example.xlriproject.R
-import com.example.xlriproject.Teachers.TeacherActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class ParentDetails : AppCompatActivity() {
     lateinit var RootRef : DatabaseReference

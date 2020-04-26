@@ -1,11 +1,9 @@
-package com.example.xlriproject.Teachers
+package com.example.xlriproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.LinearLayout
-import com.example.xlriproject.R
 
 class TeacherActivity : AppCompatActivity() {
 lateinit var batch_activity_click:LinearLayout
@@ -14,7 +12,7 @@ lateinit var batch_activity_click:LinearLayout
         setContentView(R.layout.activity_teacher)
         batch_activity_click=findViewById(R.id.batch_activity_click)
         batch_activity_click.setOnClickListener {
-            startActivity(Intent(this,Batches::class.java))
+            startActivity(Intent(this, Batches::class.java))
         }
 
     }

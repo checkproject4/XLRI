@@ -9,24 +9,24 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Teachers.AddBatchActivity">
+        <activity android:name=".AddBatchActivity">
         </activity>
-        <activity android:name=".Teachers.Batches">
+        <activity android:name=".Batches">
         </activity>
-        <activity android:name=".Teachers.TeacherActivity">
+        <activity android:name=".TeacherActivity">
         </activity>
-        <activity android:name=".Parents.ParentActivity">
+        <activity android:name=".ParentActivity">
         </activity>
-        <activity android:name=".Students.StudentActivity">
+        <activity android:name=".StudentActivity">
         </activity>
-        <activity android:name=".Students.StudentDetail">
+        <activity android:name=".StudentDetail">
         </activity>
-        <activity android:name=".Parents.ParentDetails">
+        <activity android:name=".ParentDetails">
         </activity>
         <activity
                 android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
                 android:theme="@style/Base.Theme.AppCompat"/>
-        <activity android:name=".Teachers.TeacherDetails">
+        <activity android:name=".TeacherDetails">
         </activity>
         <activity android:name=".forgot_password">
         </activity>

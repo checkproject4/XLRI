@@ -1,4 +1,4 @@
-package com.example.xlriproject.Teachers
+package com.example.xlriproject
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -7,12 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.OpenableColumns
 import android.text.TextUtils
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
-import com.example.xlriproject.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
@@ -137,7 +135,7 @@ UploadImageToStorage()
                 TextUtils.isEmpty(Fees))
             Toast.makeText(applicationContext,"Please fill all the fields",Toast.LENGTH_SHORT).show()
         else {
-            var ProfileMap = HashMap<String, String>()
+            var ProfileMap = HashMap<String, Any>()
             ProfileMap.put("TeacherName", Name)
             ProfileMap.put("TeacherAge", Age)
             ProfileMap.put("TeacherSex", Sex)
@@ -155,7 +153,7 @@ UploadImageToStorage()
                 loadingBar.setMessage("Please wait while We are creating your profile")
                 loadingBar.setCanceledOnTouchOutside(false)
                 loadingBar.show()
-                RootRef.child(firebaseAuth.currentUser!!.uid)?.setValue(ProfileMap)?.addOnCompleteListener(object :
+                RootRef.child(firebaseAuth.currentUser!!.uid)?.updateChildren(ProfileMap)?.addOnCompleteListener(object :
                     OnCompleteListener<Void> {
                     override fun onComplete(task: Task<Void>) {
                         if (task.isSuccessful()) {
